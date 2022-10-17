@@ -14,14 +14,14 @@ class UserController extends Controller
     {
         $request->validate([
             "name" => "required",
-            "email" => "required",
+            "email" => "required|email|unique:users",
             "password" => "required",
         ]);
 
         $user = User::create([
             "name" => $request->name,
             "email" =>  $request->email,
-            "password" =>  bcrypt($request->password),
+            "password" => bcrypt($request->password),
         ]);
 
         $token = $user->createToken('api-token')->accessToken;
