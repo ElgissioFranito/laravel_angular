@@ -1,0 +1,22 @@
+
+        <table class="table">
+          <thead>
+            <td>Référence</td>
+            <td>Description</td>
+            <td>Quantité</td>
+            <td>Prix</td>
+            <td></td>
+            <td></td>
+          </thead>
+          <tbody>
+            <tr *ngFor="let prod of Produits">
+              <td> {{ prod.reference}} </td>
+              <td>{{prod.description}}</td>
+              <td>{{prod.quantite}}</td>
+              <td>{{prod.prix}}</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-primary" routerLink="addProducts"> Ajouter un produit</button>

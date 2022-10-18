@@ -58,7 +58,7 @@ class UserController extends Controller
     public function listuser(){
         $users = User::All();
 
-        return [$users];
+        return $users;
     }
 
     // déconnexion à l'pplication
@@ -66,7 +66,7 @@ class UserController extends Controller
     {
         Auth::user()->token()->delete();
 
-        return response()->json([
+        return response([
             "Utilisateur" => "deconnexion réussi"
         ]);
     }

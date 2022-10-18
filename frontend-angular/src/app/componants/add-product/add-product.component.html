@@ -1,0 +1,11 @@
+<form (ngSubmit)="createProdData()">
+  <label>reference</label>
+  <input type="text" name="reference" placeholder=" entrer reference" [(ngModel)]="prod.reference"> <br> <br>
+  <label>description</label>
+  <input type="text" name="description" placeholder=" entrer description" [(ngModel)]="prod.description"> <br> <br>
+  <label>quantite</label>
+  <input type="text" name="quantite" placeholder=" entrer quantite" [(ngModel)]="prod.quantite"> <br> <br>
+  <label>prix</label>
+  <input type="text" name="prix" placeholder=" entrer prix" [(ngModel)]="prod.prix"> <br> <br>
+<button class="btn btn-success"> valider </button>
+</form>
